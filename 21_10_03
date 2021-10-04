@@ -1,0 +1,13 @@
+1. redux 를 설치하고
+2. createStroe()를 redux를 불러들임
+3. createStore() 의 인수에 사용할 reducer& initialState 을 삽입하여
+4. store 객체를 생성함.
+5. state 를 변경할 떄는 reducer 을 통해 바꿔줌...
+6. reducer 은 새로운 state 를 만들어주는 역할
+
+※ 불변성 : 어떤 값을 직접적으로 변경하지 않고 새로운 값을 만들어내는 것
+            - 필요한 값을 변형해서 사용하고 싶다면 어떤값의 사본을 만들어서 사용해야 함
+            - React 에서 React Component 가 리렌더링 되는 조건은 Props,State 의 값이 바뀌거나 
+            부모 컴포넌트가 리렌더링 될 떄
+                -여기서 React Component 의 Prop이나 State의 값이 변했는지 여부를
+                얕은 비교를 통해 감지한다.

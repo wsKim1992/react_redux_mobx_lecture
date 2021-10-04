@@ -1,0 +1,16 @@
+1_1 리덕스의 필요성
+
+    리덕스 장점:
+        -단방향
+            화면이 바뀌면, data가 바뀐다.
+        - store(data 묶음)
+        - 단방향을 유지하기 위해 action 을 만들어 줌.
+            -action : state를 바꾸기 위한 행동
+        - dispatch : action 실행 state 바꿈.
+        - 에러를 쉽게 찾아낼 수 있음
+        - action 을 통해 새로운 객체가 생성되면서 기존의 store에 있는
+          state가 대체됨.(reducer 를 통해)
+            - state 는 불변성을 유지하기 위해서 매번 새로운 객체로 변경됨
+        - middleware : dispatch 와 reducer 사이에 위치하는거
+        
+

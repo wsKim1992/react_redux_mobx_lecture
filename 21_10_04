@@ -1,0 +1,26 @@
+1.redux 에서 제공하는 combineReducer를 통해 reducer 들을 js 객체 형태로
+합치는게 가능함.
+
+2. dispatch 를 통해 발생하는 action들은 동기형태이다. 
+
+3. redux에서는 dispatch 와 reducer 사이에 위치한다. 비동기를 가능하게 하기 위하여
+    - action 이 객체고 dispatch함수는 action을 받아서 실행시킬뿐, 비동기 적인 요소가
+    들어갈 틈이 없다
+    - 이를 위해서 redux에서 middleware 를 제공해줌. 
+        -redux-thunk
+        -redux-saga
+
+※ createStore(reducer,initialState,enhancer)
+    enhancer 인자 : applyMiddleware를 통해 반환된 middleware 객체를 
+                    받기 위한 인수
+    const enhancer = applyMiddleware(firstMiddleware);
+
+4. middleware 객체 같은 경우, 3단 함수형태로 초기화가 된다.
+    - (store)=>(dispatch)=>(action)=>{
+        dispatch(action)
+    }
+    - applyMiddleware 은 여려개의 middleware 들을 매개 변수로 
+    받을 수 있다.
+
+5. redux-thunk 에서는 비동기 action 을 받을 때, 함수 형태로 받는다.
+    
